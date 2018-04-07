@@ -6,4 +6,6 @@ RUN go get github.com/asciimoo/morty
 
 EXPOSE 3000
 
-CMD ['sh', '-c', 'morty -key "$MORTY_KEY" -listen 0.0.0.0:3000']
+COPY run.sh /run.sh
+
+CMD ["/run.sh"]
